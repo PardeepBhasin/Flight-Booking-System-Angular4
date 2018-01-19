@@ -1,0 +1,26 @@
+<div class="container">
+  <header>
+      <h1>Fligh Search Engine</h1>
+  </header>
+  <div>
+    <aside class="left-sidebar home-inline-block">
+        <div class="tab" class="main-content">
+            <button md-raised-button color={{oneWayStatus}} (click)="disableReturnPicker()">One way</button>
+            <button md-raised-button color={{returnStatus}} (click)="disableReturnPicker()">Return</button><br><br><br>
+            <form>
+                <flight-autocomplete (changeCity)="onCityChange($event)" [states]="states" placeholder="Enter Origin City"></flight-autocomplete>
+                <flight-autocomplete (changeCity)="onCityChange($event)" [states]="states" placeholder="Enter Destination City"></flight-autocomplete>
+                <flight-datepicker (changeDate)="onDateChange($event)" placeholder="Departure date" required="true" isDisabled="false"></flight-datepicker>
+                <flight-datepicker (changeDate)="onDateChange($event)" placeholder="Return date" required="false" isDisabled={{isDisabled}}></flight-datepicker>
+                <button md-raised-button color="warn" (click)="fetchFlightDetails()">Search</button>
+                <br><br>
+                <flight-slider (changeSliderVal)="changeSliderVal($event)"></flight-slider>
+            </form>
+          </div>
+    </aside>
+    <article class="right-sidebar home-inline-block">
+        <flight-view></flight-view>
+    </article>
+ </div>
+</div>
+

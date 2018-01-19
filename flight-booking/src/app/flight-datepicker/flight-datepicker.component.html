@@ -1,0 +1,6 @@
+
+<md-form-field>
+    <input mdInput [mdDatepicker]="picker" placeholder="{{placeholder}}" min="{{today}}" [(ngModel)]="date" readonly="readonly" required="{{required}}">
+    <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+    <md-datepicker #picker [disabled]="isDisabled" (selectedChanged)="onDateChange($event, placeholder)"></md-datepicker>
+</md-form-field>

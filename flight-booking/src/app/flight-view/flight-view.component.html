@@ -1,0 +1,33 @@
+<div>
+    <div class="card" *ngFor="let data of filteredList;let i = index;">
+      <div class="left">
+        <div class="fare-block">
+          Rs {{data['fare']}}
+        </div>
+        <div class="float-right content-box">
+          <div>{{data['flightName']}}</div>
+          <div>{{data['status']}}</div>
+          <div>Depart : {{data['departureTime']}}</div>
+          <div>Arrive : {{data['arrivalTime']}}</div>
+          <div>Date : {{data['dueDate']}}</div>
+        </div>
+        <div class="float-left content-box">
+          <div>{{filteredList[i]['flightName']}}</div>
+          <div>{{filteredList[i]['status']}}</div>
+          <div>Depart : {{filteredList[i]['departureTime']}}</div>
+          <div>Arrive : {{filteredList[i]['arrivalTime']}}</div>
+          <div>Date : {{filteredList[i]['dueDate']}}</div>
+        </div>
+      </div>
+      <div class="right left-xs">
+        <img src="../../assets/{{data['avatar']}}.png" alt="airline" class="logo image-box">
+        <button class="book-flight" md-raised-button color="primary">Book this flight</button>
+      </div>
+    </div>
+    <div class="card" *ngIf="filteredList.length == 0">
+      <div class="no-availablity">
+          No flights availale on this date.
+      </div>
+    </div>
+  </div>
+  

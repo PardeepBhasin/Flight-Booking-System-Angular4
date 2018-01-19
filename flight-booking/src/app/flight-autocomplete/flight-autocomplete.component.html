@@ -1,0 +1,14 @@
+<form class="example-form">
+    <md-form-field class="example-full-width">
+      <input mdInput placeholder="{{placeholder}}" aria-label="placeholder" 
+        [mdAutocomplete]="auto" 
+        (ngModelChange)="onCityChange($event, placeholder)"
+        [formControl]="formCtrl" required="true">
+      <md-autocomplete #auto="mdAutocomplete">
+        <md-option *ngFor="let item of filteredStates | async" [value]="item.name">
+          <span>{{item.name}}</span>
+        </md-option>
+      </md-autocomplete>
+    </md-form-field>
+    <br />
+  </form>

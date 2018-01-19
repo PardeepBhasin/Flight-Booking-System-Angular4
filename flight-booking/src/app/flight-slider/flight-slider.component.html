@@ -1,0 +1,18 @@
+<md-card class="result">
+    <md-card-content>
+      <h2 class="example-h2">Refine flight search</h2>
+      <md-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [thumb-label]="thumbLabel"
+          [tick-interval]="tickInterval"
+          [value]="value"
+          [vertical]="vertical"
+          (change)="onInputChange($event.value)">
+      </md-slider>
+    </md-card-content>
+  </md-card>

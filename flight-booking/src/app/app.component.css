@@ -1,0 +1,58 @@
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+header, footer {
+    padding: 1em;
+    color: black;
+    border: solid 1px black;
+    clear: left;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+article {
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+.centered {
+    margin: 0 auto;
+    text-align: left;
+}
+
+input[type=text],input[type=date] {
+    padding: 4px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #1D0D05;
+    border-radius: 4px;
+}
+
+@media (min-width: 768px){
+.left-sidebar{float: left; width:23.5%; margin-right: 0%; border-right: 0px!important; padding: 2% 1%; }
+.right-sidebar{float: left; width:70%;padding: 2%;min-height: 532px; }
+}
+
+@media (max-width: 767px){
+    .left-sidebar{float: left; width:96%; margin-bottom: 20px;padding: 2%!important; }
+    .right-sidebar{float: left; width:96%;padding: 2%!important; }
+   .right-sidebar .right{float: left;}
+}
+
+.home-inline-block {
+    border:1px solid #000; display:inline-block;
+}
+
+.main-content {
+    padding-left: 15px;padding-right:15px
+}
